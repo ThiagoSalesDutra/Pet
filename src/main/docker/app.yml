@@ -1,0 +1,14 @@
+version: '2'
+services:
+    caesgatos-app:
+        image: caesgatos
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://caesgatos-postgresql:5432/CaesGatos
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    caesgatos-postgresql:
+        extends:
+            file: postgresql.yml
+            service: caesgatos-postgresql
