@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "especie",
+            "otherEntityName": "especie",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "raca"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "detalhes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "porte",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180411022646",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "raca",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

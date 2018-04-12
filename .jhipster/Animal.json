@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "especie",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dataNascimento",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180408220044",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "animal",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

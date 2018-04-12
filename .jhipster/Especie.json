@@ -1,0 +1,16 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "especie",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180411020442",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "especie",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

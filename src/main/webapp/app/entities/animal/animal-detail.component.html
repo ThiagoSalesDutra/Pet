@@ -1,0 +1,34 @@
+
+<div *ngIf="animal">
+    <h2><span jhiTranslate="caesGatosApp.animal.detail.title">Animal</span> {{animal.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="caesGatosApp.animal.especie">Especie</span></dt>
+        <dd>
+            <span>{{animal.especie}}</span>
+        </dd>
+        <dt><span jhiTranslate="caesGatosApp.animal.nome">Nome</span></dt>
+        <dd>
+            <span>{{animal.nome}}</span>
+        </dd>
+        <dt><span jhiTranslate="caesGatosApp.animal.dataNascimento">Data Nascimento</span></dt>
+        <dd>
+            <span>{{animal.dataNascimento | date:'mediumDate'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'animal/'+ animal.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
