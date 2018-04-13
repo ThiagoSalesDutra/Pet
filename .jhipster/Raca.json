@@ -6,6 +6,12 @@
             "otherEntityName": "especie",
             "relationshipType": "one-to-many",
             "otherEntityRelationshipName": "raca"
+        },
+        {
+            "relationshipName": "especie",
+            "otherEntityName": "especie",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "especie"
         }
     ],
     "fields": [

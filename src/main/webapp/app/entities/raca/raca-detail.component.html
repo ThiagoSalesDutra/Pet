@@ -16,6 +16,12 @@
         <dd>
             <span>{{raca.porte}}</span>
         </dd>
+        <dt><span jhiTranslate="caesGatosApp.raca.especie">Especie</span></dt>
+        <dd>
+            <div *ngIf="raca.especie">
+                <a [routerLink]="['/especie', raca.especie?.id]">{{raca.especie?.especie}}</a>
+            </div>
+        </dd>
     </dl>
 
     <button type="submit"

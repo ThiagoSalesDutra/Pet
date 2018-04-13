@@ -28,6 +28,13 @@
                 [(ngModel)]="raca.porte" />
         </div>
 
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="caesGatosApp.raca.especie" for="field_especie">Especie</label>
+            <select class="form-control" id="field_especie" name="especie" [(ngModel)]="raca.especie" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="especieOption.id === raca.especie?.id ? raca.especie : especieOption" *ngFor="let especieOption of especies; trackBy: trackEspecieById">{{especieOption.especie}}</option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">

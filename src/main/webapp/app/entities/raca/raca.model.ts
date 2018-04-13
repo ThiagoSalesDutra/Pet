@@ -7,6 +7,7 @@ export class Raca implements BaseEntity {
         public detalhes?: string,
         public porte?: string,
         public especies?: BaseEntity[],
+        public especie?: BaseEntity,
     ) {
     }
 }

@@ -35,10 +35,8 @@ public class Raca implements Serializable {
     @Column(name = "porte")
     private String porte;
 
-    @OneToMany(mappedBy = "raca")
-    @JsonIgnore
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Especie> especies = new HashSet<>();
+    @ManyToOne
+    private Especie especie;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -88,29 +86,17 @@ public class Raca implements Serializable {
         this.porte = porte;
     }
 
-    public Set<Especie> getEspecies() {
-        return especies;
+    public Especie getEspecie() {
+        return especie;
     }
 
-    public Raca especies(Set<Especie> especies) {
-        this.especies = especies;
+    public Raca especie(Especie especie) {
+        this.especie = especie;
         return this;
     }
 
-    public Raca addEspecie(Especie especie) {
-        this.especies.add(especie);
-        especie.setRaca(this);
-        return this;
-    }
-
-    public Raca removeEspecie(Especie especie) {
-        this.especies.remove(especie);
-        especie.setRaca(null);
-        return this;
-    }
-
-    public void setEspecies(Set<Especie> especies) {
-        this.especies = especies;
+    public void setEspecie(Especie especie) {
+        this.especie = especie;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

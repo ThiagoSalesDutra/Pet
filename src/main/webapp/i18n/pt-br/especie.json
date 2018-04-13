@@ -16,7 +16,8 @@
             "detail": {
                 "title": "Especie"
             },
-            "especie": "Especie"
+            "especie": "Especie",
+            "racas": "Racas"
         }
     }
 }

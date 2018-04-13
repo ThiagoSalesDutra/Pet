@@ -9,6 +9,7 @@ import { CaesGatosTestModule } from '../../../test.module';
 import { RacaDialogComponent } from '../../../../../../main/webapp/app/entities/raca/raca-dialog.component';
 import { RacaService } from '../../../../../../main/webapp/app/entities/raca/raca.service';
 import { Raca } from '../../../../../../main/webapp/app/entities/raca/raca.model';
+import { EspecieService } from '../../../../../../main/webapp/app/entities/especie';
 
 describe('Component Tests', () => {
 
@@ -24,6 +25,7 @@ describe('Component Tests', () => {
                 imports: [CaesGatosTestModule],
                 declarations: [RacaDialogComponent],
                 providers: [
+                    EspecieService,
                     RacaService
                 ]
             })

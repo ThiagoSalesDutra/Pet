@@ -1,6 +1,13 @@
 {
     "fluentMethods": true,
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipName": "racas",
+            "otherEntityName": "raca",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "especie"
+        }
+    ],
     "fields": [
         {
             "fieldName": "especie",

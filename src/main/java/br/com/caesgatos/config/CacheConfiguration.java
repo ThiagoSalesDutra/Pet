@@ -44,9 +44,11 @@ public class CacheConfiguration {
             cm.createCache(br.com.caesgatos.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(br.com.caesgatos.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.caesgatos.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(br.com.caesgatos.domain.Animal.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.caesgatos.domain.Especie.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.caesgatos.domain.Raca.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.caesgatos.domain.Raca.class.getName() + ".especies", jcacheConfiguration);
+            cm.createCache(br.com.caesgatos.domain.Especie.class.getName() + ".racas", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
